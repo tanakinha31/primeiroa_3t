@@ -1,5 +1,5 @@
-let tabuada = 13;
-let nome = "Carol"
+let tabuada = 12;
+let nome = "Maria Gabriela"
 function escreva () {
   document.write("Tabuada do " + tabuada + "<br>")
     document.write(tabuada + " x 1 = "+(tabuada*1)+"<br>");
@@ -31,33 +31,37 @@ function quadrado (){
     document.write("O quadrado de " + 1 + " é " + (i*i) + "<br>");
   }
 }
-
-
+fuction moeda(atual){
+  return atual.tolocaleString('pr -br' , {style: 'currency', currency)
+}
 function calcula() {
   let c = document.getElementById("valor").value;
   let j = document.getElementById("juros").value;
-  let r = c * (1 + (j/100));
+if (!Number(c)){
+  alert("0 valor do capital deve ser numerico.")
+  document.getElementById("valor").vaule = "";
+  document.getElementById("valor").focus();
+  return
+      let r = c * (1 + (j/100));
   document.write("Resultado: " + r);
 }
 
-
-
-document.write(Resultado: R$ + r)
+document.write(Resultado= R$ + r)
 }
 
-let operacao = "";
-fuction operacao (op)
-
+let op = "";
+function operacao(ope){
+  op = ope;
 }
-fuction calcule()}
-Let v1 = document.getElementById("V1").value
-ler v1 = document.getElementById("v1").value
-let r = 0;
-̣̣̣̣̣̣̣̣̣// isso deve ser duplicado a cada botão
-if(op == "+"){  
-r = Number(v1) + Number(v2);
-}
+function calcule (){
+  let v1 = document.getElementById("v1").value;
+  let v2 = document.getElementById("v2").value;
+  let r = 0;
+  // Isso deve ser duplicado a cada botão.
+  if(op == "+"){
+    r = Number(v1) + Number(v2);
+  }
 
-document.getElementById("resultado").innerHTML = r;
-
+  document.getElementById("resultado").innerHTML = r;
+  
 }
