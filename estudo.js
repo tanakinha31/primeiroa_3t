@@ -1,5 +1,5 @@
-  let tabuada = 1;
-let nome = "Antonio";
+ let tabuada = 1;
+let nome = "Mari Gabriela";
 
 function escreva() {
     document.write("tabuada do " + tabuada + "<br>")
@@ -60,13 +60,17 @@ if (!Number(t)) {
     return
 }
 let r = c;
+let texto = "";
 for (let m = 1; m <= t; m++) {
     r = c * (1 + (j / 100));
     c = r;
-    document.write("Mes " + m + " - valor: " + moeda(r) + "<br>");
+    texto +=  m + " : " + moeda(r) + "<br>"
+   // document.write("Mes " + m + " - valor: " + moeda(r) + "<br>");
 
 }
-document.write("resultado: " + moeda(r));
+document.getElementById("listameses").innerHTML = texto;
+document.getElementById("total").innerHTML = moeda(r);
+//document.write("resultado: " + moeda(r));
 }
 
 let op = "";
@@ -94,4 +98,25 @@ function calcule() {
 
     document.getElementById("resultado").innerHTML = r;
 
+}
+
+function calculaESG(){
+    let a = document.getElementById("a").vaule;
+    let b = document.getElementById("b").vaule;
+    let c = document.getElementById("c").vaule;
+    delta = (b*b) - (4*a*c)
+    let raiz;
+    let x1,x2;
+    if (delta < 0){
+        raiz = "nao tem raiz real";
+
+    }else{
+raiz = Math.sqrt(delta);
+x1 = ((-b)+raiz)/(2*a);
+x2 = ((-b)-raiz)/(2*a);
+raiz = "x1="+x1 + " e x2="+x2;
+
+    }
+
+    document.getElementById("raiz").value = raiz; 
 }
